@@ -14,11 +14,12 @@ const MyHeader = styled.header`
   color: ${theme.color.white};
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 `
 
 const HeaderLink = styled(Link)<{ active: number }>`
   border-bottom: 3px solid ${(props) => (props.active ? `${theme.color.blue}` : `transparent`)};
+  min-width: 100px;
   width: max-content;
   height: 40px;
   display: flex;

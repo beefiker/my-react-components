@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Redirect, Switch, withRouter, useLocation, useRou
 import Component from 'pages/Component/ComponentContainer'
 import BaseRenderer from 'pages/BaseRenderer'
 import Locale from 'locale/locale'
+import RowAndColumn from 'component/explain/RowAndColumn'
 import { toast } from 'component/base/toast-manager'
 
 const $c = Locale('common')
@@ -41,7 +42,7 @@ const Aside = styled.nav`
 const Content = styled.div`
   width: 60vw;
   max-height: 600px;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: ${theme.color.gray7};
   border-radius: 10px;
   padding: 20px;
@@ -58,10 +59,9 @@ const SLink = styled(Link)<{ active: number }>`
   margin-bottom: 5px;
   border-radius: 10px;
   background-color: ${(props) => (props.active ? theme.color.gray6 : 'transparent')};
-  /* color: ${(props) => (props.active ? theme.color.gray1 : 'black')}; */
+  color: ${(props) => (props.active ? theme.color.gray0 : theme.color.gray5)};
 
   transition: all 0.2s linear;
-  /* box-shadow: ${(props) => (props.active ? `inset 2px 2px 5px ${theme.color.gray9}, inset -2px -2px 5px ${theme.color.gray8};` : ``)}; */
   &:last-child {
     margin-bottom: 0px;
   }
@@ -80,11 +80,14 @@ const BaseContainer = () => {
           <SLink to='/base/Toast' active={pathname === '/base/Toast' ? 1 : 0}>
             {$c('toast')}
           </SLink>
+          <SLink to='/base/HoverText' active={pathname === '/base/HoverText' ? 1 : 0}>
+            {$c('hover_text')}
+          </SLink>
         </Col>
       </Aside>
       <Col>
         <Content>
-          {pathname === '/base' ? <h1>{$c('row_and_column')}</h1> : ''}
+          {pathname === '/base' && <RowAndColumn />}
           <Route path='/base/:id' component={BaseRenderer} />
         </Content>
       </Col>

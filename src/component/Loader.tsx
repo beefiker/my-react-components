@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Loader = () => {
-  return <section style={{ width: '100%', height: '100%', display: 'flex' }}>⏰</section>
+  return <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>⏰</div>
 }
 
 export default Loader

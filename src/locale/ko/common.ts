@@ -7,6 +7,8 @@ const common = {
   row_and_column: '행과 열',
 
   toast: '토스트 메시지',
+
+  hover_text: '마우스 오버 텍스트',
 }
 
 export default common
