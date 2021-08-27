@@ -28,7 +28,7 @@ const Footer = () => {
     <MyFooter>
       <Row>
         <Col>
-          <p>this is footer</p>
+          <p>select language </p>
         </Col>
         <select value={localStorage.getItem('lang') ?? 'ko'} onChange={onChangeLang}>
           <option value='ko'>{$c('ko')}</option>

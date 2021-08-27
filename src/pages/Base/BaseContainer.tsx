@@ -83,6 +83,12 @@ const BaseContainer = () => {
           <SLink to='/base/HoverText' active={pathname === '/base/HoverText' ? 1 : 0}>
             {$c('hover_text')}
           </SLink>
+          <SLink to='/base/Popup' active={pathname === '/base/Popup' ? 1 : 0}>
+            {$c('popup')}
+          </SLink>
+          <SLink to='/base/ContextMenu' active={pathname === '/base/ContextMenu' ? 1 : 0}>
+            {$c('context_menu')}
+          </SLink>
         </Col>
       </Aside>
       <Col>

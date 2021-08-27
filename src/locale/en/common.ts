@@ -9,5 +9,11 @@ const common = {
   toast: 'Toast message',
 
   hover_text: 'Hover text',
+  popup: 'Popup',
+  show_popup: 'Show Popup',
+
+  confirm: 'Confirm',
+
+  context_menu: 'Context Menu',
 }
 export default common

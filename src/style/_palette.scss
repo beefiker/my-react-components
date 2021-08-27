@@ -1,0 +1,89 @@
+$color-yellow: #fdf39a;
+$color-navy: #214172;
+$color-blue: #3a7afe;
+$color-black-title: #3d3e40;
+$color-black-license: #424448;
+$color-black-sub-title: #616368;
+$color-error: #ff6b60;
+$color-license-error: #aca8a8;
+$color-gray-border: #e2e5e8;
+$color-gray-border-light: #e0e0e2;
+$color-gray-placeholder: #d8dae2;
+$color-gray-dark: #b1b4bb;
+$color-gray-deep: #878b97;
+$color-gray-soft: #c3c4c5;
+$color-gray-disabled: #f6f6f6;
+$color-green-light: #ddf5e3;
+$color-email-title: #170f00;
+$color-greeting: #4a4a4a;
+$color-btn-notice: #687487;
+$color-shortcut: #f2f6f9;
+$color-panel-bg: #f4f6f9;
+$color-table-bg: #f1f3f6;
+$color-table-head: #687487;
+$color-table-border: #efefef;
+$color-gray-box: #f9f9f9;
+$color-danger: #ffdee3;
+$color-cuation: #fca50e;
+$color-redorange: #ff7553;
+$color-redorange-text: #872007;
+$color-orange: #ffb444;
+$color-orange-text: #774f00;
+$color-lemon: #ffde50;
+$color-lemon-text: #8d6302;
+$color-gray-soft-text: #636565;
+$color-checkbox-border: #dbdbdb;
+$color-button-blue: #e8ecf2;
+$color-gray-date: #9ea2ab;
+$color-cuation: #fca50e;
+$color-black-subject: #5c5e63;
+$color-mint: #13c490;
+$color-teal: #05a88c;
+$color-time-gray: #aeb2bb;
+$color-table-num: #9497a1;
+$color-unknown: #c3c4c5;
+$color-license-protective: #f14d4d;
+$color-license-permissive: #2bc155;
+$color-license-other: #ffde50;
+
+$color-weak-critical: #cc0500;
+$color-weak-high: #df3d03;
+$color-weak-medium: #f9a009;
+$color-weak-low: #ffcb0d;
+$color-weak-unknown: #cbcbcf;
+
+$color-git-add: #2bc155;
+$color-git-sub: #f14d4d;
+
+/*===========================================================================
+	MIXIN
+============================================================================*/
+@mixin square($_) {
+  width: $_;
+  height: $_;
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin circle($_) {
+  width: $_;
+  height: $_;
+  border-radius: 50%;
+}
+
+/*===========================================================================
+	Transition 
+============================================================================*/
+$transition: 0.2s;
+
+/*===========================================================================
+	min-width
+============================================================================*/
+$min-width: 1800px;
+
+/*===========================================================================
+	width
+============================================================================*/
+$hairline: 0.4pt;

@@ -1,0 +1,79 @@
+@import './palette.scss';
+
+.-alert-wrap {
+  $transition: 0.21s;
+
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10004;
+  transition: $transition;
+  @include flexCenter;
+
+  > .-alert {
+    background: #fff;
+    min-width: 360px;
+    border-radius: 12px;
+    padding: 20px 24px 24px;
+    text-align: center;
+    opacity: 0;
+    transition: $transition;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: #f4f6f9 1px solid;
+    box-shadow: 0 3px 10px 6px rgba($color: #5a5d63, $alpha: 0.1);
+
+    > .-title-wrap {
+      .-title-row {
+        align-items: end;
+      }
+      .-title {
+        font-family: 'appleB';
+        color: $color-black-title;
+        font-size: 16px;
+      }
+      > .-close-wrap {
+        padding: 14px;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        > .-bar {
+          background-color: $color-black-sub-title;
+          width: 19.8px;
+          height: 2px;
+          border-radius: 1px;
+          left: 50%;
+          top: 50%;
+          position: absolute;
+          transform: translate(-50%, -50%) rotate(45deg);
+
+          &:last-child {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    > .-btn-wrap {
+      > button {
+        flex: 1;
+
+        &.-negative {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  &.vis {
+    background: rgba($color: #2e2e2e, $alpha: 0.5);
+
+    > .-alert {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+}

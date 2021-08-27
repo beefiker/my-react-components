@@ -6,6 +6,10 @@ import TipHover2 from '../../static/img/icons/tip-hover2.png'
 import FormLabel from 'component/FromLabel'
 const $c = Locale('common')
 
+const Container = styled.div`
+  min-height: 500px;
+`
+
 const HoverPad = styled.div`
   width: 100%;
   height: 50px;
@@ -32,7 +36,7 @@ const HoverText = () => {
     setHoverTextX(-10000)
   }
   return (
-    <div>
+    <Container>
       <h1>{$c('hover_text')}</h1>
       <HoverPad
         onMouseMove={(e: React.MouseEvent) => mouseEnterHandler('pad', 'Your_hover_text', e)}
@@ -46,11 +50,12 @@ const HoverText = () => {
         src={TipHover2}
         alt=''
       />
-      <FormLabel title={`FormLabel`} tip_title={'aaa'} tip={'asd' + `\n` + 'asdsa'} />
+      <FormLabel title='FormLabelL' left_required={true} tip_title='Title of tip' tip={'Tip line 1' + `\n` + 'Tip line 2'} />
+      <FormLabel title='FormLabelR' required={true} tip_title='Title of tip' tip={'Tip line 1' + `\n` + 'Tip line 2'} />
       <div className='f-hover-text' style={{ left: hoverTextX, top: hoverTextY }}>
         {hoverText}
       </div>
-    </div>
+    </Container>
   )
 }
 

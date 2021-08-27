@@ -6,6 +6,9 @@ import RowAndColumn from 'component/explain/RowAndColumn'
 import Toast from 'component/explain/Toast'
 import theme from 'theme'
 import HoverText from 'component/base/HoverText'
+import PopupViewer from 'component/base/PopupViewer'
+import ContextMenu from 'component/base/ContextMenu'
+import ExpContextMenu from 'component/explain/ExpContextMenu'
 
 const $c = Locale('common')
 
@@ -32,6 +35,10 @@ const BaseRenderer = ({ match, history, location }: RouteComponentProps<{ id: st
         return <Toast />
       case 'HoverText':
         return <HoverText />
+      case 'Popup':
+        return <PopupViewer />
+      case 'ContextMenu':
+        return <ExpContextMenu />
       default:
         return (
           <UnknownDiv>

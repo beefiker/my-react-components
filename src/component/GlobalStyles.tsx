@@ -3,24 +3,234 @@ import theme from 'theme'
 import reset from 'styled-reset'
 
 const GlobalStyles = createGlobalStyle`
-    ${reset}
+    ${reset};
+    a,
+    /* input,
+    button,
+    textarea {
+      all: unset;
+    } */
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    sub,
+    sup,
+    tt,
+    var,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video,
+    button,
+    input,
+    br,
+    textarea {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+      color: #444;
+      line-height: 1.2;
+      letter-spacing: -0.36px;
+    }
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    button {
+      cursor: pointer;
+      @include no-drag;
+    }
+    img {
+      border: none;
+      vertical-align: middle;
+    }
+    ol,
+    ul,
+    li {
+      list-style: none;
+    }
+    i,
+    em {
+      font-style: normal;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    fieldset {
+      border: none;
+    }
+    legend {
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      visibility: hidden;
+      line-height: 0;
+      font-size: 0;
+      position: absolute;
+      left: -999px;
+    }
+    input[type='text']::-ms-clear {
+      display: none;
+    }
+    input[type='password']::-ms-clear {
+      display: none;
+    }
+    .button-wrap {
+      width: 100%;
+      justify-content: center;
+      
+      .button {
+        width: 120px;
+        height: 38px;
+        border-radius: 6px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+
+        &.cancel {
+          background-color: ${theme.color.gray5};
+          margin-right: 12px;
+        }
+
+        &.submit {
+          background-color: ${theme.color.gray8};
+        }
+      }
+    }
+    .title{
+      font-size:1.5rem;
+    }
+    .apple {
+      font-family: 'appleM';
+    }
+    .appleB {
+      font-family: 'appleB';
+    }
+    .appleEB {
+      font-family: 'appleEB';
+    }
+    .appleL {
+      font-family: 'appleL';
+    }
+    .appleH {
+      font-family: 'appleH';
+    }
+    .appleR {
+      font-family: 'appleR';
+    }
+    .appleSB {
+      font-family: 'appleSB';
+    }
+    .appleT {
+      font-family: 'appleT';
+    }
+    .appleUL {
+      font-family: 'appleUL';
+    }
     &::-webkit-scrollbar-track {
-    background-color: gray;
-    border-radius: 10px;
-  }
+      background-color: gray;
+      border-radius: 10px;
+    }
 
-  &::-webkit-scrollbar {
+    &::-webkit-scrollbar {
 
-    width: 3px;
-    height: 0px;
-    background-color: gray;
-    border-radius: 10px;
-  }
+      width: 3px;
+      height: 0px;
+      background-color: gray;
+      border-radius: 10px;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #fff;
-  }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #fff;
+    }
     a{
         text-decoration: none;
         color:inherit;
@@ -55,26 +265,17 @@ const GlobalStyles = createGlobalStyle`
 
       z-index: 9999;
       max-width: 150px;
+      max-height: 200px;
       background-color: #fff;
       padding: 10px 12px;
-      box-shadow: 0 3px 10px 6px rgba($color: $color-navy, $alpha: 0.07);
+      /* box-shadow: 0 3px 10px 6px rgba($color: $color-navy, $alpha: 0.07); */
+      box-shadow: 0 3px 10px 6px rgba(0, 0, 0, 0.07);
       border-radius: 5px;
       white-space: normal;
 
       span {
         white-space: normal;
         word-break: break-all;
-        &.blue {
-          color: $color-blue;
-        }
-
-        &.desc {
-          display: flex;
-          flex-wrap: wrap;
-          max-width: 150px;
-          white-space: normal;
-          word-break: break-all;
-        }
       }
     }
 
@@ -106,93 +307,29 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
-/* FormLabel */
-.form-label {
-  z-index: 99;
-  > span {
-    font-size: 14px;
-    margin-right: 2px;
 
-    &.title {
-      color: ${theme.color.gray1}
-    }
-
-    &.required {
-      color: ${theme.color.blue}
-    }
-    &.left_required {
-      color: ${theme.color.blue}
-    }
-  }
-
-  .img-holder-tip {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transform: translateY(2px);
-
-    width: 14px;
-    height: 14px;
-
-    background: url('../../../static/img/icons/tip-hover.svg') no-repeat;
-    background-size: 14px 14px;
-    background-position: 50%;
-
-    img {
-      display: none;
-    }
-
-    .tooltip-container {
-      display: none;
-      background-color: #fff;
-      padding: 10px;
-
-      .tooltip-title {
-        display: block;
-        color: ${theme.color.gray3};
-        font-size: 13px;
-        margin-bottom: 11px;
+    @keyframes slide-left {
+      from {
+        transform: translateX(30px);
+        opacity: 0;
       }
-      .tooltip {
-        display: block;
-        color: ${theme.color.gray4};
-        font-size: 12px;
-        line-height: 18px;
+
+      to {
+        transform: translateX(0px);
+        opacity: 1;
       }
     }
+    @keyframes slide-up {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
 
-    &:hover {
-      .tooltip-container {
-        display: block;
-        position: absolute;
-        z-index: 99;
-        top: 25px;
-        left: -10px;
-        box-shadow: 0 0px 10px 3px;
-        border-radius: 5px;
-        background-color: #fff;
-
-        &::before {
-          content: '\00a0';
-          display: block;
-          height: 10px;
-          width: 10px;
-          top: -5px;
-          z-index: -111;
-          background-color: #fff;
-          position: absolute;
-          transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          -webkit-transform: rotate(45deg);
-          box-shadow: -2000000px -3.5px 3px 0.13px rgba(178, 178, 178, 0.4);
-        }
+      to {
+        transform: translateY(0px);
+        opacity: 1;
       }
     }
-  }
-}
-
 `
 
 export default GlobalStyles
