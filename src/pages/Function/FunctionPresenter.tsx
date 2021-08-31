@@ -5,12 +5,10 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from 'theme'
 import { BrowserRouter, Route, Redirect, Switch, withRouter, useLocation, useRouteMatch, useParams } from 'react-router-dom'
-import Component from 'pages/Component/ComponentContainer'
 import BaseRenderer from 'pages/BaseRenderer'
 import Locale from 'locale/locale'
 import RowAndColumn from 'component/explain/RowAndColumn'
-import { toast } from 'component/base/toast-manager'
-import ComponentRenderer from 'pages/ComponentRenderer'
+import FunctionRenderer from 'pages/FunctionRenderer'
 
 const $c = Locale('common')
 
@@ -72,24 +70,25 @@ interface IProps {
   pathname: string
 }
 
-const ComponentPresenter: React.FC<IProps> = ({ pathname }) => {
+const FunctionPresenter: React.FC<IProps> = ({ pathname }) => {
   return (
     <Section>
       <Aside>
         <Col>
-          <SLink to='/component/something' active={pathname === '/component/something' || pathname === '/component' ? 1 : 0}>
+          <SLink to='/function/something' active={pathname === '/function/something' || pathname === '/function' ? 1 : 0}>
+            {/* {$c('row_and_column')} */}
             메뉴1
           </SLink>
         </Col>
       </Aside>
       <Col>
         <Content>
-          {/* {pathname === '/component' && <RowAndColumn />} */}
-          <Route path='/component/:id' component={ComponentRenderer} />
+          {/* {pathname === '/function' && <RowAndColumn />} */}
+          <Route path='/function/:id' component={FunctionRenderer} />
         </Content>
       </Col>
     </Section>
   )
 }
 
-export default ComponentPresenter
+export default FunctionPresenter

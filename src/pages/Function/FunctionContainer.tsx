@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route, Redirect, Switch, withRouter, useLocation, useRouteMatch, useParams } from 'react-router-dom'
-import BasePresenter from './BasePresenter'
 
-const BaseContainer = () => {
+import FunctionPresenter from './FunctionPresenter'
+
+const FunctionContainer = () => {
   const { pathname } = useLocation()
 
-  console.log(pathname)
-  return <BasePresenter pathname={pathname} />
+  return <FunctionPresenter pathname={pathname} />
 }
 
-export default BaseContainer
+export default FunctionContainer

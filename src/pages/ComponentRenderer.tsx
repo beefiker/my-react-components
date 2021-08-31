@@ -23,33 +23,24 @@ const UnknownDiv = styled.div`
   color: ${theme.fontColor.white};
 `
 
-const BaseRenderer = ({ match, history, location }: RouteComponentProps<{ id: string }>) => {
+const ComponentRenderer = ({ match, history, location }: RouteComponentProps<{ id: string }>) => {
   const {
     params: { id },
   } = match
   const renderHelper = () => {
     switch (id) {
-      case 'RowAndColumn':
-        return <RowAndColumn />
-      case 'Toast':
-        return <Toast />
-      case 'HoverText':
-        return <HoverText />
-      case 'Popup':
-        return <PopupViewer />
-      case 'ContextMenu':
-        return <ExpContextMenu />
       default:
-        return <RowAndColumn />
-    }
-    if (!id) {
-      return <RowAndColumn />
-    } else {
-      return <RowAndColumn />
+        return (
+          <UnknownDiv>
+            <span>?</span>
+            <span>?</span>
+            <span>?</span>
+          </UnknownDiv>
+        )
     }
   }
 
   return renderHelper()
 }
 
-export default BaseRenderer
+export default ComponentRenderer

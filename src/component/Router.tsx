@@ -7,6 +7,7 @@ const Header = lazy(() => import('component/Header'))
 const Footer = lazy(() => import('component/Footer'))
 const Base = lazy(() => import('pages/Base'))
 const Component = lazy(() => import('pages/Component'))
+const Function = lazy(() => import('pages/Function'))
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
         <Switch>
           <Route path='/base' component={Base} />
           <Route path='/component' exact component={Component} />
+          <Route path='/function' exact component={Function} />
           <Redirect from='*' to='/base' />
         </Switch>
         <Footer />

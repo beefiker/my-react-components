@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from 'theme'
 import { BrowserRouter, Route, Redirect, Switch, withRouter, useLocation, useRouteMatch, useParams } from 'react-router-dom'
-import Component from 'pages/Component/ComponentContainer'
 import BaseRenderer from 'pages/BaseRenderer'
 import Locale from 'locale/locale'
 import RowAndColumn from 'component/explain/RowAndColumn'
 import { toast } from 'component/base/toast-manager'
-import ComponentRenderer from 'pages/ComponentRenderer'
+import Toast from 'component/explain/Toast'
+import HoverText from 'component/base/HoverText'
 
 const $c = Locale('common')
 
@@ -67,29 +67,40 @@ const SLink = styled(Link)<{ active: number }>`
     margin-bottom: 0px;
   }
 `
-
 interface IProps {
   pathname: string
 }
 
-const ComponentPresenter: React.FC<IProps> = ({ pathname }) => {
+const BasePresenter: React.FC<IProps> = ({ pathname }) => {
   return (
     <Section>
       <Aside>
         <Col>
-          <SLink to='/component/something' active={pathname === '/component/something' || pathname === '/component' ? 1 : 0}>
-            메뉴1
+          <SLink to='/base/RowAndColumn' active={pathname === '/base/RowAndColumn' || pathname === '/base' ? 1 : 0}>
+            {$c('row_and_column')}
+          </SLink>
+          <SLink to='/base/Toast' active={pathname === '/base/Toast' ? 1 : 0}>
+            {$c('toast')}
+          </SLink>
+          <SLink to='/base/HoverText' active={pathname === '/base/HoverText' ? 1 : 0}>
+            {$c('hover_text')}
+          </SLink>
+          <SLink to='/base/Popup' active={pathname === '/base/Popup' ? 1 : 0}>
+            {$c('popup')}
+          </SLink>
+          <SLink to='/base/ContextMenu' active={pathname === '/base/ContextMenu' ? 1 : 0}>
+            {$c('context_menu')}
           </SLink>
         </Col>
       </Aside>
       <Col>
         <Content>
-          {/* {pathname === '/component' && <RowAndColumn />} */}
-          <Route path='/component/:id' component={ComponentRenderer} />
+          {pathname === '/base' && <RowAndColumn />}
+          <Route path='/base/:id' component={BaseRenderer} />
         </Content>
       </Col>
     </Section>
   )
 }
 
-export default ComponentPresenter
+export default BasePresenter
